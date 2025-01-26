@@ -7,6 +7,66 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <h1>Random password generator</h1>
+    <!-- trigger for first question -->
+    <button class="startPWgeneration">GENERATE RANDOM PASSWORD</button>
+    <!-- Password length determination -->
+    <form class="length" style="display: none">
+      <label for="pwLength">How long would you like your password to be?</label>
+      <input type="number" id="pwLength" name="pwLength" value="pwLength" />
+      <input type="submit" value="Submit" />
+    </form>
+    <!-- use of upper case letters -->
+    <form class="upperCase" style="display: none">
+      <p>
+        Would you like your password to contain upper case alphabet letters?
+      </p>
+      <input
+        type="radio"
+        id="upperCaseYes"
+        name="upperCase"
+        value="upperCase"
+      />
+      <label for="upperCaseYes">Yes</label>
+      <input type="radio" id="upperCaseNo" name="upperCase" value="upperCase" />
+      <label for="upperCaseNo">No</label>
+      <input type="submit" value="Submit" />
+    </form>
+    <!-- use of numbers -->
+    <form class="numbers" style="display: none">
+      <p>Would you like your password to contain numbers?</p>
+      <input type="radio" id="numbersYes" name="numbers" value="numbers" />
+      <label for="numbersYes">Yes</label>
+      <input type="radio" id="numbersNo" name="numbers" value="numbers" />
+      <label for="numbersNo">No</label>
+      <input type="submit" value="Submit" />
+    </form>
+    <!-- use of special characters -->
+    <form class="specialChar" style="display: none">
+      <p>Would you like your password to contain special characters?</p>
+      <input
+        type="radio"
+        id="specialCharYes"
+        name="specialChar"
+        value="specialChar"
+      />
+      <label for="specialCharYes">Yes</label>
+      <input
+        type="radio"
+        id="specialCharNo"
+        name="specialChar"
+        value="specialChar"
+      />
+      <label for="specialCharNo">No</label>
+      <input type="submit" value="Submit" />
+    </form>
+    <!-- final password display -->
+    <div class="finalPassword" style="display: none">
+      <p>Here is your randomly generated password:</p>
+      <div class="pwContainer">???</div>
+    </div>
+    <!-- reste and restart button -->
+    <button class="pwReset" style="display: none">Reset</button>
     <script src="script.js" defer></script>
   </body>
 </html>
